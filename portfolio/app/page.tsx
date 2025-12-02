@@ -11,7 +11,7 @@ export default function Home() {
         <h2 className="text-2xl">console.log("Hello World");</h2>
 
         <div className="p-2 mt-5 flex gap-5 sm:gap-20 sm:p-10">
-          <Link href={"https://youtube.com"} className={links}>Om Meg</Link>
+          <Link href={"/aboutme"} className={links}>Om Meg</Link>
           <Link href={"https://youtube.com"} className={links}>Prosjektgalleri</Link>
           <Link href={"https://youtube.com"} className={links}>Kontakt</Link>
         </div>
