@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const links = "border p-2 rounded-xl bg-white/50 text-xl transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-slate-300";
-
+const links = "border border-black p-2 rounded-xl bg-white/50 text-xl transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-slate-300  bg-[url(/paper.jpg)] bg-cover";
 export default function Home() {
   return (
     <div className="bgPattern h-screen">
