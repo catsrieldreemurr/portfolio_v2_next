@@ -12,5 +12,5 @@ export default function Navbar(){
                 <Link href={"/contactme"} className={links}>Kontakt</Link>
             </div>
         </nav>
-    )
+    ) 
 }
