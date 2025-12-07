@@ -9,7 +9,6 @@ export async function POST(req:Request){
     const emailTo = process.env.EMAIL;
     if (!emailTo) throw new Error("EMAIL Variable is missing");
 
-
     const safeName = he.encode(name);
     const safeEmail = he.encode(email);
     const safeMessage = he.encode(message);

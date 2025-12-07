@@ -47,20 +47,20 @@ export default function Page2(){
                 e.preventDefault();
             }}>
                 <div className="mt-10">
-                    <Label htmlFor="name">Navn</Label>
+                    <Label htmlFor="name">Ditt Navn</Label>
                     <Input placeholder="Navn Navneson" id="name" onChange={(e) => {
                         setName(e.target.value);
                     }}></Input>
                 </div>
 
                 <div>
-                    <Label htmlFor="email">Epost</Label>
+                    <Label htmlFor="email">Din Epost</Label>
                     <Input placeholder="eksempel@gmail.com" id="email" onChange={(e) => {
                         setEmail(e.target.value);
                     }}></Input>
                 </div>
                 <div>
-                    <Label htmlFor="msg">Melding</Label>
+                    <Label htmlFor="msg">Din Melding</Label>
                     <Textarea placeholder="Hello world!" id="msg" onChange={(e) => {
                         setMessage(e.target.value);
                     }}></Textarea>  
