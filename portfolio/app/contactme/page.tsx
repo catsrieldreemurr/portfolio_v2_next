@@ -15,9 +15,11 @@ export default function Page2(){
 
     const [warningIsVisible, setWarningIsVisible] = useState(false);
 
+    const [warningMessage, setWarningMessage]= useState('');
     async function handleSubmit(){
         if(name.trim().length > 0 && email.trim().length > 0 && message.trim().length > 0){
-            const res = await fetch('/api/sendEmail', {
+            try{
+            const response = await fetch('/api/sendEmail', {
                 method: "POST",
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({
@@ -27,9 +29,20 @@ export default function Page2(){
                 })
             })
 
-            console.log(res);
+            const data = await response.json();
+
+            if(data === 'Email-Adresse er ikke gyldig.' || data.error){
+                setWarningIsVisible(true);
+                setWarningMessage(data);
+            } else{
+                setWarningIsVisible(false);
+            }
+        } catch(err){
+            throw new Error("Something went wrong.")
+        }
         } else{
-            console.log('missing content');
+            setWarningMessage("Data Mangler. Fyll inn alle felter og prøv igjen.")
+            setWarningIsVisible(true);
         }
     }
 
@@ -42,6 +55,12 @@ export default function Page2(){
                 <Typography>Er det noe interessant du vil vite om meg? Ta kontakt!</Typography>
                 <Typography>Email Adresse: danobrovold@gmail.com </Typography>
             </div>
+
+            {warningIsVisible && <div className="flex flex-col items-center mt-10">
+                <div className="rounded-xl bg-red-200 border border-red-800 w-[20rem] p-4">
+                    <p className="text-lg text-red-800 text-center">{warningMessage}</p>
+                </div>
+            </div>}
 
             <form className="flex flex-col space-y-2 w-[20rem] mx-auto" onSubmit={(e) => {
                 e.preventDefault();
