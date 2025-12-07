@@ -38,7 +38,8 @@ export default function Page2(){
                 setWarningIsVisible(false);
             }
         } catch(err){
-            throw new Error("Something went wrong.")
+            setWarningMessage("Noe gikk galt. Prøv igjen senere.");
+            setWarningIsVisible(true);
         }
         } else{
             setWarningMessage("Data Mangler. Fyll inn alle felter og prøv igjen.")
