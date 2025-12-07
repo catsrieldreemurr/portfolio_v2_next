@@ -14,6 +14,7 @@ export default function Page2(){
     const [message, setMessage] = useState('');
 
     const [warningIsVisible, setWarningIsVisible] = useState(false);
+    const [success, setSuccess] = useState(false);
 
     const [warningMessage, setWarningMessage]= useState('');
     async function handleSubmit(){
@@ -34,16 +35,25 @@ export default function Page2(){
             if(data === 'Email-Adresse er ikke gyldig.' || data.error){
                 setWarningIsVisible(true);
                 setWarningMessage(data);
+
+                setSuccess(false);
             } else{
                 setWarningIsVisible(false);
+                setSuccess(true);
+
+                setName("");
+                setEmail("");
+                setMessage("");
             }
         } catch(err){
             setWarningMessage("Noe gikk galt. Prøv igjen senere.");
             setWarningIsVisible(true);
+            setSuccess(false);
         }
         } else{
             setWarningMessage("Data Mangler. Fyll inn alle felter og prøv igjen.")
             setWarningIsVisible(true);
+            setSuccess(false);
         }
     }
 
@@ -60,6 +70,12 @@ export default function Page2(){
             {warningIsVisible && <div className="flex flex-col items-center mt-10">
                 <div className="rounded-xl bg-red-200 border border-red-800 w-[20rem] p-4">
                     <p className="text-lg text-red-800 text-center">{warningMessage}</p>
+                </div>
+            </div>}
+
+            {success && <div className="flex flex-col items-center mt-10">
+                <div className="rounded-xl bg-green-200 border border-green-800 w-[20rem] p-4">
+                    <p className="text-lg text-green-800 text-center">Melding er sent </p>
                 </div>
             </div>}
 
