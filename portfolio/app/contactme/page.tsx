@@ -13,6 +13,8 @@ export default function Page2(){
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
 
+    const [warningIsVisible, setWarningIsVisible] = useState(false);
+
     async function handleSubmit(){
         if(name.trim().length > 0 && email.trim().length > 0 && message.trim().length > 0){
             const res = await fetch('/api/sendEmail', {
@@ -26,7 +28,9 @@ export default function Page2(){
             })
 
             console.log(res);
-        } 
+        } else{
+            console.log('missing content');
+        }
     }
 
     return(
