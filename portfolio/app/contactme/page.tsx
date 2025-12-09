@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { Spinner } from "@/components/ui/spinner";
 
 export default function Page2(){
     const [name, setName] = useState('');
@@ -15,11 +16,13 @@ export default function Page2(){
 
     const [warningIsVisible, setWarningIsVisible] = useState(false);
     const [success, setSuccess] = useState(false);
+    const [loading, setLoading] = useState(false);
 
     const [warningMessage, setWarningMessage]= useState('');
     async function handleSubmit(){
         if(name.trim().length > 0 && email.trim().length > 0 && message.trim().length > 0){
             try{
+            setLoading(true);
             const response = await fetch('/api/sendEmail', {
                 method: "POST",
                 headers: {'Content-Type': 'application/json'},
@@ -31,6 +34,7 @@ export default function Page2(){
             })
 
             const data = await response.json();
+            setLoading(false);
 
             if(data === 'Email-Adresse er ikke gyldig.' || data.error){
                 setWarningIsVisible(true);
@@ -102,7 +106,7 @@ export default function Page2(){
                     }}></Textarea>  
                 </div>
 
-                <Button variant={"outline"} aria-label="Submit" className="border border-black" onClick={handleSubmit}>Send Melding</Button>
+                <Button variant={"outline"} aria-label="Submit" className="border border-black" onClick={handleSubmit} disabled={loading}>{loading && <Spinner></Spinner>}Send Melding</Button>
                 
             </form>
         </div>
