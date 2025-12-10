@@ -25,7 +25,7 @@ export default function Page(){
 
             <div className="flex flex-col items-center mt-[5rem] p-5"> 
                 
-                <div>
+                <div className="bg-[url(/paper.jpg)] p-5 rounded-lg">
                     <Typography variant="h3" isBold>Programmering</Typography>
                     <Typography>Jeg begynte ordentlig med programmering i 2022, gjennom Scratch.</Typography>
                     <Typography>Dette fikk meg interessert i programmering, og fikk meg til å begynne å lære ROBLOX LUAU.</Typography>
@@ -33,7 +33,7 @@ export default function Page(){
                     <Typography>Etter dette så lærte jeg enkel Python og C#, og JavaScript.</Typography>
                 </div>
 
-                <div className="mt-5">
+                <div className="mt-5 bg-[url(/paper.jpg)] p-5 rounded-lg">
                     <Typography variant="h3" isBold>Webutvikling</Typography>
                     <Typography>Webutvikling er fortsatt relativt nytt for meg.</Typography>
                     <Typography>Jeg ble introdusert til HTML og CSS på ungdomsskolen, og brukte det for å lage enkle nettsider uten kode.</Typography>
@@ -43,7 +43,7 @@ export default function Page(){
                     <div className="mt-10"><Typography>Jeg lærte først om REACT i Mars 2025 gjennom en skoleoppgave.</Typography></div>
                     <Typography>Etter dette så begynte jeg å lage prosjekter med REACT, spesielt REACT + VITE.</Typography>
                     <Typography>Rundt Oktober av 2025 så lagde jeg mitt første NextJS prosjekt, etter at en venn anbefalte det.</Typography>
-                    <Typography>Jeg begynte deretter å lage prosjekter i NEXT, og er nå komfortabel nok med NEXT.</Typography>
+                    <Typography>Jeg begynte deretter å lage prosjekter i NEXT, og har det morsomt med å lage forskjellige ting med det.</Typography>
                 </div> 
             </div>
         </div>
