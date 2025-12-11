@@ -65,24 +65,61 @@ export default function Page(){
                         <Typography>- HTML/CSS/JS (80%)</Typography>
                         <Typography>- REACT (70%)</Typography>
                         <Typography>- NextJS (70%)</Typography>
+                        <Typography>- TypeScript (50%)</Typography>
                         <Typography>- C# & Unity (40%)</Typography>
                         <Typography>- Enkel Python (30%)</Typography>
                         <Typography>- ROBLOX LUAU (50%)</Typography>
                         <Typography>- Backend med NodeJS (10%)</Typography>
 
-                        <div className="mt-10">
-                            <Typography isBold>Other</Typography>
-                            <Typography>- Video Editing in Vegas Pro 19 (35%)</Typography>
-                            <Typography>- Enkel Bilderedigering med Photoshop og GIMP (30%)</Typography>
-                        </div>
+                        <Typography isBold spacer>Other</Typography>
+                        <Typography>- Video Editing in Vegas Pro 19 (35%)</Typography>
+                        <Typography>- Enkel Bilderedigering med Photoshop og GIMP (30%)</Typography>
                     </div>
+                </div>}
 
+                {currentInfo === "education" && <div className="p-5 flex justify-center">
+                    <div className="sm:w-1/3 bg-[url(/paper.jpg)] p-5 rounded-xl">
+                        <Typography variant="h2" isBold isCentered>- Utdanning -</Typography>
+                        <Typography isBold>Grunnskole</Typography>
+                        <Typography>- Fagerlund Barneskole</Typography>
+                        <Typography>- Brumunddal Ungdomsskole</Typography>
+                        
+                        <Typography isBold spacer>Videregående</Typography>
+                        <Typography>- Hamar Katedralskole Informasjonsteknologi og Medieproduksjon (1IM)</Typography>
+                        <Typography>- Hamar Katedralskole Informasjonsteknologi (2INF) </Typography>
+                    </div>
+                </div>}
+
+                {currentInfo === "experience" && <div className="p-5 flex justify-center">
+                    <div className="sm:w-1/3 bg-[url(/paper.jpg)] p-5 rounded-xl">
+                        <Typography variant="h2" isBold isCentered>- Erfaring -</Typography>
+                            <Typography variant="h3" isBold spacer>Mai 2022</Typography>
+                            <Typography>- Besøk på Langmoen Logistikk Avdeling I Brumunddal</Typography>
+                            <Typography>- 1 Dag, Jobbeskyggedag</Typography>
+
+                            <Typography variant="h3" isBold spacer>Juli 2023</Typography>
+                            <Typography>- Assistent i 3. Klasse på Mørkved Skole</Typography>
+                            <Typography>- 5 Dager, Utplasseringuke på ungdomsskolen</Typography>
+
+                            <Typography variant="h3" isBold spacer>November 2023</Typography>
+                            <Typography>- Besøk hos Itera Norge i Oslo</Typography>
+                            <Typography>- 1 Dag, Jobbskyggedag</Typography>
+
+                            <Typography variant="h3" isBold spacer>Mars 2025</Typography>
+                            <Typography>- Frontend utvikling hos Dyplink, Hamar</Typography>
+                            <Typography>- 3 dager i 2 uker.</Typography>
+                            <Typography>Utviklet et spørreundersøkelsesprogram som lagret info til en JSON fil</Typography>
+
+                            <Typography variant="h3" isBold spacer>Oktober-Desember 2025</Typography>
+                            <Typography>- Frontend utvikling hos Dyplink, Hamar</Typography>
+                            <Typography>- Hver Torsdag (Pågående)</Typography>
+                            <Typography>Jobber på et internt front-end side med REACT + TypeScript</Typography>
+                    </div>
                 </div>}
             </div>
 
-            <div className="flex flex-col items-center mt-[5rem] p-5"> 
-                
-                <div className="bg-[url(/paper.jpg)] p-5 rounded-lg">
+            <div className="flex flex-col sm:flex-row items-center mt-[5rem] p-5 justify-center gap-5 items-stretch"> 
+                <div className="bg-[url(/paper.jpg)] p-5 rounded-lg sm:w-1/3">
                     <Typography variant="h3" isBold>Programmering</Typography>
                     <Typography>Jeg begynte ordentlig med programmering i 2022, gjennom Scratch.</Typography>
                     <Typography>Dette fikk meg interessert i programmering, og fikk meg til å begynne å lære ROBLOX LUAU.</Typography>
@@ -90,14 +127,14 @@ export default function Page(){
                     <Typography>Etter dette så lærte jeg enkel Python og C#, og JavaScript.</Typography>
                 </div>
 
-                <div className="mt-5 bg-[url(/paper.jpg)] p-5 rounded-lg">
+                <div className="bg-[url(/paper.jpg)] p-5 rounded-lg sm:w-1/3">
                     <Typography variant="h3" isBold>Webutvikling</Typography>
                     <Typography>Webutvikling er fortsatt relativt nytt for meg.</Typography>
                     <Typography>Jeg ble introdusert til HTML og CSS på ungdomsskolen, og brukte det for å lage enkle nettsider uten kode.</Typography>
                     <Typography>Jeg lærte ikke JavaScript før 2024 på Videregående, men når jeg gjorde det så elsket jeg det.</Typography>
                     <Typography>Jeg begynte å bruke JavaScript for å lage noen mindre prosjekter.</Typography>
 
-                    <div className="mt-10"><Typography>Jeg lærte først om REACT i Mars 2025 gjennom en skoleoppgave.</Typography></div>
+                    <Typography spacer>Jeg lærte først om REACT i Mars 2025 gjennom en skoleoppgave.</Typography>
                     <Typography>Etter dette så begynte jeg å lage prosjekter med REACT, spesielt REACT + VITE.</Typography>
                     <Typography>Rundt Oktober av 2025 så lagde jeg mitt første NextJS prosjekt, etter at en venn anbefalte det.</Typography>
                     <Typography>Jeg begynte deretter å lage prosjekter i NEXT, og har det morsomt med å lage forskjellige ting med det.</Typography>
