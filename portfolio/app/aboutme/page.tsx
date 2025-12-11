@@ -1,9 +1,13 @@
+"use client"
 import Image from "next/image";
 import Navbar from "../../components/ui/subpageNavbar";
 import Typography from "@/components/ui/typography";
 import LinkElement from "@/components/ui/link";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 export default function Page(){
+    const [currentInfo, setcurrentInfo] = useState('none');
     return (
         <div className="bgPattern">
             <Navbar></Navbar>
@@ -21,6 +25,59 @@ export default function Page(){
                         <LinkElement href="https://github.com/twomuchCatsriel" isBold>GitHub (Arkiv)</LinkElement>
                     </div>
                 </div>
+            </div>
+
+            <div>
+                <div className="flex flex-row gap-5 justify-center mt-[4rem]">
+                    <Button onClick={() => {
+                        if(currentInfo !== "abilities")
+                        {
+                            setcurrentInfo("abilities")
+                        } 
+                        else{
+                            setcurrentInfo("none")
+                        }     
+                    }}>Ferdigheter</Button>
+                    <Button onClick={() => {
+                        if(currentInfo !== "education")
+                        {
+                            setcurrentInfo("education")
+                        } 
+                        else{
+                            setcurrentInfo("none")
+                        }        
+                    }}>Utdanning</Button>
+                    <Button onClick={() => {
+                        if(currentInfo !== "experience")
+                        {
+                            setcurrentInfo("experience")
+                        } 
+                        else{
+                            setcurrentInfo("none")
+                        }     
+                    }}>Erfaring</Button>
+                </div>
+
+                {currentInfo === "abilities" && <div className="p-5 flex justify-center">
+                    <div className="sm:w-1/3 bg-[url(/paper.jpg)] p-5 rounded-xl">
+                        <Typography variant="h2" isBold isCentered>- Ferdigheter -</Typography>
+                        <Typography isBold>{`Programmering`}</Typography>
+                        <Typography>- HTML/CSS/JS (80%)</Typography>
+                        <Typography>- REACT (70%)</Typography>
+                        <Typography>- NextJS (70%)</Typography>
+                        <Typography>- C# & Unity (40%)</Typography>
+                        <Typography>- Enkel Python (30%)</Typography>
+                        <Typography>- ROBLOX LUAU (50%)</Typography>
+                        <Typography>- Backend med NodeJS (10%)</Typography>
+
+                        <div className="mt-10">
+                            <Typography isBold>Other</Typography>
+                            <Typography>- Video Editing in Vegas Pro 19 (35%)</Typography>
+                            <Typography>- Enkel Bilderedigering med Photoshop og GIMP (30%)</Typography>
+                        </div>
+                    </div>
+
+                </div>}
             </div>
 
             <div className="flex flex-col items-center mt-[5rem] p-5"> 
