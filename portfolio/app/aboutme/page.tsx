@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
 export default function Page(){
-    const [currentInfo, setcurrentInfo] = useState('none');
+    const [currentInfo, setcurrentInfo] = useState('abilities');
     return (
         <div className="bgPattern">
             <Navbar></Navbar>
@@ -33,29 +33,20 @@ export default function Page(){
                         if(currentInfo !== "abilities")
                         {
                             setcurrentInfo("abilities")
-                        } 
-                        else{
-                            setcurrentInfo("none")
-                        }     
-                    }}>Ferdigheter</Button>
+                        }   
+                    }} className={`${currentInfo === "abilities" && "bg-slate-800"}`}>Ferdigheter</Button>
                     <Button onClick={() => {
                         if(currentInfo !== "education")
                         {
                             setcurrentInfo("education")
-                        } 
-                        else{
-                            setcurrentInfo("none")
-                        }        
-                    }}>Utdanning</Button>
+                        }       
+                    }} className={`${currentInfo === "education" && "bg-slate-800"}`}>Utdanning</Button>
                     <Button onClick={() => {
                         if(currentInfo !== "experience")
                         {
                             setcurrentInfo("experience")
-                        } 
-                        else{
-                            setcurrentInfo("none")
-                        }     
-                    }}>Erfaring</Button>
+                        }      
+                    }} className={`${currentInfo === "experience" && "bg-slate-800"}`}>Erfaring</Button>
                 </div>
 
                 {currentInfo === "abilities" && <div className="p-5 flex justify-center">
@@ -118,7 +109,7 @@ export default function Page(){
                 </div>}
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center mt-[5rem] p-5 justify-center gap-5 items-stretch"> 
+            <div className="flex flex-col sm:flex-row items-center p-5 justify-center gap-5 items-stretch"> 
                 <div className="bg-[url(/paper.jpg)] p-5 rounded-lg sm:w-1/3">
                     <Typography variant="h3" isBold>Programmering</Typography>
                     <Typography>Jeg begynte ordentlig med programmering i 2022, gjennom Scratch.</Typography>
