@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Typography from "../components/ui/typography";
 
-const links = "border border-black p-2 rounded-xl bg-white/50 text-xl transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 sm:hover:text-gray-500 bg-[url(/paper.jpg)] bg-cover";
+const links = "border border-black p-2 rounded-xl bg-white/50 text-lg sm:text-xl transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 sm:hover:text-gray-500 bg-[url(/paper.jpg)] bg-cover";
 export default function Home() {
   return (
     <div className="bgPattern h-screen">
@@ -11,6 +11,7 @@ export default function Home() {
         <Typography variant="h2">console.log("Hello World");</Typography>
 
         <div className="p-2 mt-5 flex gap-5 sm:gap-20 sm:p-10">
+          <Link href={"/info"} className={links}>Info</Link>
           <Link href={"/aboutme"} className={links}>Om Meg</Link>
           <Link href={"https://youtube.com"} className={links}>Prosjektgalleri</Link>
           <Link href={"/contactme"} className={links}>Kontakt</Link>

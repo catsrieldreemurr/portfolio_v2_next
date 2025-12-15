@@ -7,6 +7,7 @@ export default function Navbar(){
         <nav>
             <div className="flex gap-5 justify-center bg-[url(/paper.jpg)] bg-cover p-5 text-md border-b border-black sm:bg-none sm:gap-10 sm:p-10 sm:border-none ">
                 <Link href={"/"} className={links}>Main</Link>
+                <Link href={"/info"} className={links}>Info</Link>
                 <Link href={"/aboutme"} className={links}>Om Meg</Link>
                 <Link href={"/"} className={links}>Prosjektgalleri</Link>
                 <Link href={"/contactme"} className={links}>Kontakt</Link>
