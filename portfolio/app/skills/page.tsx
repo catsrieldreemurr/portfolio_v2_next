@@ -1,5 +1,8 @@
 "use client"
+import AbilityList from "@/components/itemwrapper";
+import ItemWrapper from "@/components/itemwrapper";
 import { Button } from "@/components/ui/button";
+import { Progress } from "@/components/ui/progress";
 import Navbar from "@/components/ui/subpageNavbar";
 import Typography from "@/components/ui/typography";
 import { useState } from "react";
@@ -22,37 +25,37 @@ export default function Page(){
                         {
                             setcurrentInfo("abilities")
                         }   
-                    }} className={`${currentInfo === "abilities" && "bg-slate-800"}`}>Ferdigheter</Button>
+                    }} className={`${currentInfo === "abilities" && "bg-slate-700"}`}>Ferdigheter</Button>
                     <Button onClick={() => {
                         if(currentInfo !== "education")
                         {
                             setcurrentInfo("education")
                         }       
-                    }} className={`${currentInfo === "education" && "bg-slate-800"}`}>Utdanning</Button>
+                    }} className={`${currentInfo === "education" && "bg-slate-700"}`}>Utdanning</Button>
                     <Button onClick={() => {
                         if(currentInfo !== "experience")
                         {
                             setcurrentInfo("experience")
                         }      
-                    }} className={`${currentInfo === "experience" && "bg-slate-800"}`}>Erfaring</Button>
+                    }} className={`${currentInfo === "experience" && "bg-slate-700"}`}>Erfaring</Button>
                 </div>
 
                 {currentInfo === "abilities" && <div className="p-5 flex justify-center">
                     <div className="sm:w-1/3 bg-[url(/paper.jpg)] p-5 rounded-xl">
                         <Typography variant="h2" isBold isCentered>- Ferdigheter -</Typography>
-                        <Typography isBold>{`Programmering`}</Typography>
-                        <Typography>- HTML/CSS/JS (80%)</Typography>
-                        <Typography>- REACT (70%)</Typography>
-                        <Typography>- NextJS (70%)</Typography>
-                        <Typography>- TypeScript (50%)</Typography>
-                        <Typography>- C# & Unity (40%)</Typography>
-                        <Typography>- Enkel Python (30%)</Typography>
-                        <Typography>- ROBLOX LUAU (50%)</Typography>
-                        <Typography>- Backend med NodeJS (10%)</Typography>
+                        <Typography isBold isUnderline>{`Programmering`}</Typography>
+                        
+                        <AbilityList value={80} text="HTML/CSS/JS (80%)"></AbilityList>
+                        <AbilityList value={70} text="REACT (70%)"></AbilityList>
+                        <AbilityList value={50} text="NextJS (50%)"></AbilityList>
+                        <AbilityList value={20} text="Unity og C# (20%)"></AbilityList>
+                        <AbilityList value={30} text="Python (30%)"></AbilityList>
+                        <AbilityList value={45} text="Roblox LUAU (45%)"></AbilityList>
+                        <AbilityList value={10} text="Backend med Node.JS (10%)"></AbilityList>
 
-                        <Typography isBold spacer>Other</Typography>
-                        <Typography>- Video Editing in Vegas Pro 19 (35%)</Typography>
-                        <Typography>- Enkel Bilderedigering med Photoshop og GIMP (30%)</Typography>
+                        <Typography isBold spacer isUnderline>Other</Typography>
+                        <AbilityList value={35} text="Video Editing in Vegas Pro 19"></AbilityList>
+                        <AbilityList value={30} text="Bilderedigering med Photoshop og GIMP"></AbilityList>
                     </div>
                 </div>}
 
