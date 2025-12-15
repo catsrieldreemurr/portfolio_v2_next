@@ -2,6 +2,7 @@
 import AbilityList from "@/components/itemwrapper";
 import ItemWrapper from "@/components/itemwrapper";
 import { Button } from "@/components/ui/button";
+import Footerbar from "@/components/ui/footerbar";
 import { Progress } from "@/components/ui/progress";
 import Navbar from "@/components/ui/subpageNavbar";
 import Typography from "@/components/ui/typography";
@@ -54,8 +55,8 @@ export default function Page(){
                         <AbilityList value={10} text="Backend med Node.JS (10%)"></AbilityList>
 
                         <Typography isBold spacer isUnderline>Other</Typography>
-                        <AbilityList value={35} text="Video Editing in Vegas Pro 19"></AbilityList>
-                        <AbilityList value={30} text="Bilderedigering med Photoshop og GIMP"></AbilityList>
+                        <AbilityList value={35} text="Video Editing in Vegas Pro 19 (35%)"></AbilityList>
+                        <AbilityList value={30} text="Bilderedigering med Photoshop og GIMP (30%)"></AbilityList>
                     </div>
                 </div>}
 
@@ -98,6 +99,8 @@ export default function Page(){
                             <Typography>Jobber på et internt front-end side med REACT + TypeScript</Typography>
                     </div>
                 </div>}
+
+            <Footerbar></Footerbar>
         </div>
     )
 }
