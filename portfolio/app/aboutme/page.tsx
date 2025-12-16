@@ -2,6 +2,7 @@ import Image from "next/image";
 import Navbar from "../../components/ui/subpageNavbar";
 import Typography from "@/components/ui/typography";
 import LinkElement from "@/components/ui/link";
+import Footerbar from "@/components/ui/footerbar";
 
 export default function Page(){
     return (
@@ -45,6 +46,7 @@ export default function Page(){
                     <Typography>Jeg begynte deretter å lage prosjekter i NEXT, og har det morsomt med å lage forskjellige ting med det.</Typography>
                 </div> 
             </div>
+            <Footerbar></Footerbar>
         </div>
     )
 }

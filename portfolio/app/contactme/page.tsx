@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Spinner } from "@/components/ui/spinner";
+import Footerbar from "@/components/ui/footerbar";
 
 export default function Page2(){
     const [name, setName] = useState('');
@@ -109,6 +110,9 @@ export default function Page2(){
                 <Button variant={"outline"} aria-label="Submit" className="border border-black" onClick={handleSubmit} disabled={loading}>{loading && <Spinner></Spinner>}Send Melding</Button>
                 
             </form>
+            <div className="mt-[5-rem]">
+                <Footerbar></Footerbar>
+            </div>
         </div>
     )
 }

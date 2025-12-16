@@ -11,7 +11,7 @@ export default function Home() {
         <Typography variant="h2">console.log("Hello World");</Typography>
 
         <div className="p-2 mt-5 flex gap-5 sm:gap-20 sm:p-10">
-          <Link href={"/skills"} className={links}>Info</Link>
+          <Link href={"/skills"} className={links}>Skills</Link>
           <Link href={"/aboutme"} className={links}>Om Meg</Link>
           <Link href={"https://youtube.com"} className={links}>Prosjektgalleri</Link>
           <Link href={"/contactme"} className={links}>Kontakt</Link>
