@@ -9,7 +9,7 @@ export default function Navbar(){
                 <Link href={"/"} className={links}>Main</Link>
                 <Link href={"/skills"} className={links}>Skills</Link>
                 <Link href={"/aboutme"} className={links}>Om Meg</Link>
-                <Link href={"/"} className={links}>Prosjektgalleri</Link>
+                <Link href={"/projectgallery"} className={links}>Prosjektgalleri</Link>
                 <Link href={"/contactme"} className={links}>Kontakt</Link>
             </div>
         </nav>

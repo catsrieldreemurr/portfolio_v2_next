@@ -13,11 +13,8 @@ export default function Page(){
     return (
         <div className="bgPattern">
             <Navbar></Navbar>
-            <div className="mt-[5rem] sm:mt-5 p-5 flex flex-col items-center">
-                <Typography variant="h2" isBold>- Kort Om Meg- </Typography>
-                <Typography>Howdy! Jeg er Dan Andreo, en 17 år gammel nerd fra Norge.</Typography>
-                <Typography>Jeg går på Informasjonsteknologi på Hamar Katedralskole (2INF), med fokus på Utvikling.</Typography>
-                <Typography>Mine interesser inkluderer mye programmeringsrelatert, som Spillutvikling og webutvikling.</Typography>
+                <div className="mt-[5rem] sm:mt-5 p-5 flex flex-col items-center">
+                <Typography variant="h2" isBold>- Kunnskap og Erfaringer - </Typography>
             </div>
 
                 <div className="flex flex-row gap-5 justify-center mt-[4rem]">
@@ -44,9 +41,11 @@ export default function Page(){
                 {currentInfo === "abilities" && <div className="p-5 flex justify-center">
                     <div className="sm:w-1/3 bg-[url(/paper.jpg)] p-5 rounded-xl">
                         <Typography variant="h2" isBold isCentered>- Ferdigheter -</Typography>
-                        <Typography isBold isUnderline>{`Programmering`}</Typography>
+                        <Typography isCentered>Denne listen er basert på hvor komfortabel jeg føler jeg er med hvert emne.</Typography>
+                        <Typography isBold isUnderline spacer>{`Programmering`}</Typography>
                         
-                        <AbilityList value={80} text="HTML/CSS/JS (80%)"></AbilityList>
+                        <AbilityList value={70} text="HTML/CSS (70%)"></AbilityList>
+                        <AbilityList value={70} text="JavaScript (70%)"></AbilityList>
                         <AbilityList value={70} text="REACT (70%)"></AbilityList>
                         <AbilityList value={50} text="NextJS (50%)"></AbilityList>
                         <AbilityList value={20} text="Unity og C# (20%)"></AbilityList>

@@ -23,7 +23,7 @@ export default function Footerbar(){
                 <Link href={"/"} className={`mt-5 ${linkString}`}>Main</Link>
                 <Link href={"/skills"} className={linkString}>Skills</Link>
                 <Link href={"/aboutme"} className={linkString}>Om Meg</Link>
-                <Link href={"/"} className={linkString}>Prosjektgalleri</Link>
+                <Link href={"/projectgallery"} className={linkString}>Prosjektgalleri</Link>
                 <Link href={"/contactme"} className={linkString}>Kontakt Meg</Link>
             </div>
 
