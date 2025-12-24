@@ -5,6 +5,7 @@ import { Badge } from "./badge";
 import Image from "next/image";
 import Footerbar from "./footerbar";
 import { Spinner } from "./spinner";
+import Link from "next/link";
 
 interface Project {
     projectInfo: {
@@ -66,7 +67,9 @@ export default function ProjectsList(){
                             <p>{currProject.projectInfo.projectDate}</p>
                             <p>{currProject.projectInfo.description}</p>
 
-                            <div className="text-lg sm:flex gap-5 justify-center mt-5">
+                            
+
+                            <div className="text-md sm:flex gap-5 justify-center mt-5 sm:text-lg">
                                 <p className="font-bold">Stack:</p>
                                 {
                                     currProject.projectInfo.stack.map((text, index) => {
@@ -74,15 +77,23 @@ export default function ProjectsList(){
                                     })
                                 }
                             </div>
-                            
-                            <div className="flex justify-center">
-                                <Image src={currProject.projectInfo.previewImageURL} height={400} width={400} alt="previewImage" className="rounded-sm mt-5"></Image>
-                            </div>
 
                             <div className="flex gap-2 justify-center mt-5">
                                 {currProject.projectInfo.tags.map((text, index) => {
                                     return <Badge key={index}>{text}</Badge>})}
                             </div>
+
+
+                            <div className="flex justify-center">
+                                <Image src={currProject.projectInfo.previewImageURL} height={400} width={400} alt="previewImage" className="rounded-sm mt-5"></Image>
+                            </div>
+
+                            
+                            <div className="text-white font-bold mt-5 flex gap-5 justify-center">
+                                {currProject.links.githubRepositoryLink !== "" && <Link href={currProject.links.githubRepositoryLink} className="bg-slate-800 p-3 rounded-md hover:bg-slate-600">GitHub Repository</Link>}
+                                {currProject.links.liveVersion !== "" && <Link href={currProject.links.liveVersion} className="bg-slate-800 p-3 rounded-md hover:bg-slate-600">Live Version</Link>}
+                            </div>
+                            
                         </div>
                     </div>
                 })
