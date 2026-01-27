@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Typography from "../components/ui/typography";
 
-const links = "border border-black p-2 rounded-xl bg-white/50 text-lg sm:text-xl transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 sm:hover:text-gray-500 bg-[url(/paper.jpg)] bg-cover";
+const links = "border border-black p-2 rounded-xl bg-white/50 text-sm sm:text-xl transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 sm:hover:text-gray-500 bg-[url(/paper.jpg)] bg-cover";
 export default function Home() {
   return (
     <div className="bgPattern h-screen">

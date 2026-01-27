@@ -2,6 +2,8 @@
 import AbilityList from "@/components/itemwrapper";
 import ItemWrapper from "@/components/itemwrapper";
 import { Button } from "@/components/ui/button";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import CarouselLoadout from "@/components/ui/carouselFrame";
 import Footerbar from "@/components/ui/footerbar";
 import { Progress } from "@/components/ui/progress";
 import Navbar from "@/components/ui/subpageNavbar";
@@ -39,23 +41,75 @@ export default function Page(){
                 </div>
 
                 {currentInfo === "abilities" && <div className="p-5 flex justify-center">
-                    <div className="sm:w-1/3 bg-[url(/paper.jpg)] p-5 rounded-xl">
+                    <div className="w-6/6 sm:w-1/3 bg-[url(/paper.jpg)] p-5 rounded-xl">
                         <Typography variant="h2" isBold isCentered>- Ferdigheter -</Typography>
-                        <Typography isCentered>Denne listen er basert på hvor komfortabel jeg føler jeg er med hvert emne.</Typography>
-                        <Typography isBold isUnderline spacer>{`Programmering`}</Typography>
                         
-                        <AbilityList value={70} text="HTML/CSS (70%)"></AbilityList>
-                        <AbilityList value={70} text="JavaScript (70%)"></AbilityList>
-                        <AbilityList value={70} text="REACT (70%)"></AbilityList>
-                        <AbilityList value={50} text="NextJS (50%)"></AbilityList>
-                        <AbilityList value={20} text="Unity og C# (20%)"></AbilityList>
-                        <AbilityList value={30} text="Python (30%)"></AbilityList>
-                        <AbilityList value={45} text="Roblox LUAU (45%)"></AbilityList>
-                        <AbilityList value={10} text="Backend med Node.JS (10%)"></AbilityList>
+                        <div className="flex justify-center items-center p-5">
+                            <div className="w-5/6">
+                                <Carousel className="bg-slate-700 rounded-lg text-white">
+                                    <CarouselContent>
+                                        <CarouselItem> 
+                                            <CarouselLoadout 
+                                                skillText="NextJS" 
+                                                imagePath="/nextjs.png"
+                                                comfortLevel="Veldig Komfortabel (80%)">
+                                            </CarouselLoadout> 
+                                        </CarouselItem>
 
-                        <Typography isBold spacer isUnderline>Other</Typography>
-                        <AbilityList value={35} text="Video Editing in Vegas Pro 19 (35%)"></AbilityList>
-                        <AbilityList value={30} text="Bilderedigering med Photoshop og GIMP (30%)"></AbilityList>
+                                        <CarouselItem> 
+                                            <CarouselLoadout 
+                                                skillText="TypeScript" 
+                                                imagePath="/typescript.png"
+                                                comfortLevel="Komfortabel (60%)">
+                                            </CarouselLoadout> 
+                                        </CarouselItem>
+
+                                        <CarouselItem> 
+                                            <CarouselLoadout 
+                                                skillText="HTML/CSS/JS" 
+                                                imagePath="/htmllogo.png"
+                                                comfortLevel="Ekstremt Komfortabel (90%)">
+                                            </CarouselLoadout> 
+                                        </CarouselItem>
+
+                                        <CarouselItem> 
+                                            <CarouselLoadout 
+                                                skillText="C# / Unity" 
+                                                imagePath="/C_Sharp.png"
+                                                comfortLevel="Litt Komfortabel (20%)">
+                                            </CarouselLoadout> 
+                                        </CarouselItem>
+
+                                        <CarouselItem> 
+                                            <CarouselLoadout 
+                                                skillText="ROBLOX LUAU" 
+                                                imagePath="/roblox.png"
+                                                comfortLevel="Komfortabel (50%)">
+                                            </CarouselLoadout> 
+                                        </CarouselItem>
+
+                                        <CarouselItem> 
+                                            <CarouselLoadout 
+                                                skillText="NodeJS Backend" 
+                                                imagePath="/nodejs.png"
+                                                comfortLevel="Litt Komfortabel (30%)">
+                                            </CarouselLoadout> 
+                                        </CarouselItem>
+
+                                        <CarouselItem> 
+                                            <CarouselLoadout 
+                                                skillText="React" 
+                                                imagePath="/react.png"
+                                                comfortLevel="Veldig Komfortabel (90%)">
+                                            </CarouselLoadout> 
+                                        </CarouselItem>
+
+                                    </CarouselContent>
+                                    <CarouselPrevious className="bg-slate-800 text-white"></CarouselPrevious>
+                                    <CarouselNext className="bg-slate-800 text-white"></CarouselNext>
+                                </Carousel>
+                            </div>
+                        </div>
                     </div>
                 </div>}
 

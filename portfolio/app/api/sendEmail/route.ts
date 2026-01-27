@@ -24,7 +24,7 @@ export async function POST(req:Request){
         `;
 
         await resend.emails.send({
-            from: 'onboarding@resend.dev',
+            from: 'contact@catsrieldreemurr.com',
             to: emailTo,
             subject: `MESSAGE FROM ${safeName} (SENT FROM PORTFOLIO)`,
             html: Builtmessage
